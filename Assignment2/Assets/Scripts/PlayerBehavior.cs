@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class snitchBehavior : MonoBehaviour
+public class PlayerBehavior : MonoBehaviour
 {
+    public GameObject snitch;
     private Rigidbody physicsBody;
-    Vector3 direction;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,12 +15,9 @@ public class snitchBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        direction = new Vector3(Random.Range(-50,50),Random.Range(-50,50),Random.Range(-50,50));
-        physicsBody.AddForce(direction);
-    }
-    void OnCollisionEnter ()
-    {
-        direction = -(direction*5);
-        physicsBody.AddForce(direction);
+        float distance = Vector3.Distance(transform.position, snitch.transform.position);
+        Vector3 force = (snitch.transform.position - transform.position);
+        force.Normalize();
+        physicsBody.AddForce(distance*force);
     }
 }
