@@ -15,8 +15,8 @@ public class snitchBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        direction = new Vector3(Random.Range(-50,50),Random.Range(-50,50),Random.Range(-50,50));
-        physicsBody.AddForce(direction);
+        direction = new Vector3 (Random.Range(-50,50),Random.Range(-50,50),Random.Range(-50,50));
+        physicsBody.AddForce(direction/5);
     }
     void OnCollisionEnter ()
     {

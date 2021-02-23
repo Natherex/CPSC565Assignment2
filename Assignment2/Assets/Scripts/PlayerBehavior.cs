@@ -20,6 +20,11 @@ public class PlayerBehavior : MonoBehaviour
         this.agro = agro;
         this.stamina = stamina;
         this.team = team;
+        if(team == 1){
+            gameObject.GetComponent<Renderer>().material.SetColor("_Color",Color.red);
+        }else{
+            gameObject.GetComponent<Renderer>().material.SetColor("_Color",Color.green);
+        }
     }
     void Start()
     {
@@ -31,9 +36,14 @@ public class PlayerBehavior : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(transform.position, snitch.transform.position);
-        Vector3 force = (snitch.transform.position - transform.position);
-        force.Normalize();
-        physicsBody.AddForce(distance*force);
-        globals.Instance.numberOfGrifs = 3;
+        Vector3 direction = (snitch.transform.position - transform.position);
+        direction.Normalize();
+        if(physicsBody.velocity.magnitude > maxVelocity)
+        {
+            physicsBody.velocity = physicsBody.velocity.normalized * maxVelocity;
+        }else{
+            //physicsBody.AddForce(distance*force);
+            physicsBody.AddForce(direction * distance);
+        }
     }
 }

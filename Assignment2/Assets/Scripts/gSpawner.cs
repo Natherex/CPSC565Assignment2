@@ -9,7 +9,6 @@ public class gSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        globals.Instance.numberOfSlyth = 3;
         for(int i = 0 ; i < globals.Instance.numberOfGrifs ; i++)
         {
             createPlayer();
@@ -20,6 +19,7 @@ public class gSpawner : MonoBehaviour
         int max = globals.Instance.numberOfGrifs;
         while(true)
         {
+            yield return new WaitForSeconds(globals.Instance.spawnRate);
             if( max > globals.Instance.numberOfGrifs)
             {
                 yield return new WaitForSeconds(globals.Instance.spawnRate);
@@ -32,7 +32,7 @@ public class gSpawner : MonoBehaviour
     {
         GameObject newPlayer = Instantiate(player) as GameObject;
         newPlayer.transform.position = new Vector3(-45,Random.Range(5,40),Random.Range(-30,30) );
-        newPlayer.GetComponent<PlayerBehavior>().constructor(10,10,10,10,1);
+        newPlayer.GetComponent<PlayerBehavior>().constructor(10,10,10,10,2);
     }
     // Update is called once per frame
     void Update()
