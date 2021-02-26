@@ -188,6 +188,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: East Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 5666025930662300798, guid: 90e242b54e99f0845b7a284369489fa3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Arena
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90e242b54e99f0845b7a284369489fa3, type: 3}
 --- !u!1 &146857575
@@ -501,6 +506,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: North Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 5666025930662300798, guid: 90e242b54e99f0845b7a284369489fa3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Arena
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90e242b54e99f0845b7a284369489fa3, type: 3}
 --- !u!1 &1021677119
@@ -674,6 +684,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: South Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 5666025930662300798, guid: 90e242b54e99f0845b7a284369489fa3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Arena
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90e242b54e99f0845b7a284369489fa3, type: 3}
 --- !u!4 &1350735117 stripped
@@ -793,8 +808,8 @@ MonoBehaviour:
   numberOfGrifs: 5
   numberOfSlyth: 5
   spawnRate: 5
-  gScore: 5
-  sScore: 6
+  gScore: 0
+  sScore: 0
 --- !u!114 &1601610872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -958,6 +973,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Top
       objectReference: {fileID: 0}
+    - target: {fileID: 5666025930662300798, guid: 90e242b54e99f0845b7a284369489fa3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Arena
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90e242b54e99f0845b7a284369489fa3, type: 3}
 --- !u!4 &1742636318 stripped
@@ -977,7 +997,7 @@ GameObject:
   - component: {fileID: 2117208583}
   m_Layer: 0
   m_Name: Arena
-  m_TagString: Untagged
+  m_TagString: Arena
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1068,6 +1088,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: West Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 5666025930662300798, guid: 90e242b54e99f0845b7a284369489fa3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Arena
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90e242b54e99f0845b7a284369489fa3, type: 3}

@@ -10,8 +10,8 @@ public class globals : MonoBehaviour
     public int numberOfSlyth;
     public int spawnRate;
 
-    public int gScore = 5;
-    public int sScore = 5;
+    public int gScore = 0;
+    public int sScore = 0;
     private void Awake()
     {
         if ( Instance == null)
@@ -31,3 +31,4 @@ public class globals : MonoBehaviour
 //https://www.youtube.com/watch?v=gAB64vfbrhI&ab_channel=Brackeys
 //https://www.youtube.com/watch?v=CPKAgyp8cno&ab_channel=ResoCoder
 //https://mathworld.wolfram.com/Box-MullerTransformation.html
+//https://docs.unity3d.com/ScriptReference/
