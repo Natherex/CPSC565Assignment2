@@ -835,7 +835,7 @@ GameObject:
   - component: {fileID: 1635476315}
   - component: {fileID: 1635476314}
   m_Layer: 0
-  m_Name: Griffon Spawn
+  m_Name: Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

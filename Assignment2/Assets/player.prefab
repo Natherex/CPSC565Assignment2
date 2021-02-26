@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 165061360780322000}
   - component: {fileID: 4520986584976287181}
   - component: {fileID: 6388077076215723989}
+  - component: {fileID: 8233452502180901298}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -128,5 +129,18 @@ MonoBehaviour:
   maxVelocity: 0
   agro: 0
   stamina: 0
+  Exhaustion: 100
   team: 0
   snitch: {fileID: 0}
+--- !u!114 &8233452502180901298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7986335063910222164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6a074638b74d51429b4621e12a8d5e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

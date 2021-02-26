@@ -9,6 +9,9 @@ public class PlayerBehavior : MonoBehaviour
     public int agro;
     public int stamina;
 
+    public double Exhaustion = 100;
+
+    bool resting = false;
     public int team;
     public GameObject snitch;
     private Rigidbody physicsBody;
@@ -35,6 +38,8 @@ public class PlayerBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Exhaustion > 10 && resting == false )
+        {
         float distance = Vector3.Distance(transform.position, snitch.transform.position);
         Vector3 direction = (snitch.transform.position - transform.position);
         direction.Normalize();
@@ -44,6 +49,16 @@ public class PlayerBehavior : MonoBehaviour
         }else{
             //physicsBody.AddForce(distance*force);
             physicsBody.AddForce(direction * distance);
+        }
+        Exhaustion -= ((Mathf.Abs(physicsBody.velocity.x)) + (Mathf.Abs(physicsBody.velocity.x)) + (Mathf.Abs(physicsBody.velocity.x)) )* weight/1000;
+    
+        }else
+        {
+            resting = true;
+            physicsBody.velocity = Vector3.zero;
+            Exhaustion +=1;
+            if(Exhaustion > 50)
+                resting = false;
         }
     }
 }
