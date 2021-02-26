@@ -18,10 +18,20 @@ public class collision : MonoBehaviour
             {
                 //Debug.Log(collision.gameObject.name);
                 if(player.team != enemy.team)
+                {
                     Destroy(collision.gameObject);
+                    if(player.team == 1)
+                        globals.Instance.numberOfGrifs --; 
+                    else
+                        globals.Instance.numberOfSlyth --; 
+                }
                 else if(player.team == enemy.team && ( Random.Range(0,100) > 95))
                 {
                     Destroy(gameObject);
+                    if(player.team == 1)
+                        globals.Instance.numberOfSlyth --; 
+                    else
+                        globals.Instance.numberOfGrifs --; 
                 }
             }
 

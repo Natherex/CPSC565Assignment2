@@ -11,7 +11,7 @@ public class globals : MonoBehaviour
     public int spawnRate;
 
     public int gScore = 5;
-    public int sScore = 6;
+    public int sScore = 5;
     private void Awake()
     {
         if ( Instance == null)
@@ -30,3 +30,4 @@ public class globals : MonoBehaviour
 //https://www.youtube.com/watch?v=4Wh22ynlLyk&ab_channel=PressStart
 //https://www.youtube.com/watch?v=gAB64vfbrhI&ab_channel=Brackeys
 //https://www.youtube.com/watch?v=CPKAgyp8cno&ab_channel=ResoCoder
+//https://mathworld.wolfram.com/Box-MullerTransformation.html

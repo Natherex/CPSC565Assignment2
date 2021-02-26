@@ -16,7 +16,7 @@ public class snitchBehavior : MonoBehaviour
     void Update()
     {
         direction = new Vector3 (Random.Range(-50,50),Random.Range(-50,50),Random.Range(-50,50));
-        physicsBody.AddForce(direction/5);
+        physicsBody.AddForce(direction/20);
     }
     void OnCollisionEnter ()
     {

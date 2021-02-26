@@ -24,6 +24,7 @@ public class sSpawner : MonoBehaviour
             {
                 yield return new WaitForSeconds(globals.Instance.spawnRate);
                 createPlayer();
+                globals.Instance.numberOfSlyth++;
             }
 
         }
@@ -32,7 +33,16 @@ public class sSpawner : MonoBehaviour
     {
         GameObject newPlayer = Instantiate(player) as GameObject;
         newPlayer.transform.position = new Vector3(45,Random.Range(5,40),Random.Range(-30,30) );
-        newPlayer.GetComponent<PlayerBehavior>().constructor(10,10,10,10,1);
+
+        newPlayer.GetComponent<PlayerBehavior>().constructor(createattribute(85,17),createattribute(16,2),createattribute(30,7),createattribute(50,15),1);
+        
+    }
+    private float createattribute(int mean,int devi)
+    {
+        float x = 1 - Random.Range(0.0f,1.0f);
+        float y = 1 - Random.Range(0.0f,1.0f);
+        float num = Mathf.Sqrt(-2 * Mathf.Log(x)) * Mathf.Sin(2.0f * Mathf.PI * y);
+        return (num*devi) + mean ;
     }
     // Update is called once per frame
     void Update()
