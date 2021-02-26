@@ -9,6 +9,9 @@ public class globals : MonoBehaviour
     public int numberOfGrifs;
     public int numberOfSlyth;
     public int spawnRate;
+
+    public int gScore = 5;
+    public int sScore = 6;
     private void Awake()
     {
         if ( Instance == null)

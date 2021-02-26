@@ -11,6 +11,7 @@ Made simple to use (drag and drop, done) for regular keyboard layout
 wasd : basic movement
 shift : Makes camera accelerate
 space : Moves camera on X and Z axis only.  So camera doesn't gain any height*/
+//https://forum.unity.com/threads/fly-cam-simple-cam-script.67042/
  
  
 public float mainSpeed = 40.0f; //regular speed
@@ -21,13 +22,20 @@ private Vector3 lastMouse = new Vector3(255, 255, 255); //kind of in the middle 
 private float totalRun = 1.0f;
  
 void Update () {
-    lastMouse = Input.mousePosition - lastMouse ;
-    lastMouse = new Vector3(-lastMouse.y * camSens, lastMouse.x * camSens, 0 );
-    lastMouse = new Vector3(transform.eulerAngles.x + lastMouse.x , transform.eulerAngles.y + lastMouse.y, 0);
-    transform.eulerAngles = lastMouse;
-    lastMouse =  Input.mousePosition;
+    //screen stops rotating with mouse if you hold z
+    if(!Input.GetKey (KeyCode.Z))
+    {
+        lastMouse = Input.mousePosition - lastMouse ;
+        lastMouse = new Vector3(-lastMouse.y * camSens, lastMouse.x * camSens, 0 );
+        lastMouse = new Vector3(transform.eulerAngles.x + lastMouse.x , transform.eulerAngles.y + lastMouse.y, 0);
+        transform.eulerAngles = lastMouse;
+        lastMouse =  Input.mousePosition;
+    }else
+    {
+        lastMouse = Input.mousePosition;
+    }
     //Mouse  camera angle done.  
-   
+
     //Keyboard commands
     var p = GetBaseInput();
     if (Input.GetKey (KeyCode.LeftShift)){
@@ -73,4 +81,6 @@ private Vector3 GetBaseInput(){ //returns the basic values, if it's 0 than it's 
     }
     return p_Velocity;
 }
+
+
 }
