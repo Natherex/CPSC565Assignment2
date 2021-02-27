@@ -11,8 +11,8 @@ Made simple to use (drag and drop, done) for regular keyboard layout
 wasd : basic movement
 shift : Makes camera accelerate
 space : Moves camera on X and Z axis only.  So camera doesn't gain any height*/
-//https://forum.unity.com/threads/fly-cam-simple-cam-script.67042/
- 
+//[10]WindexGlow (n.d.). Fly cam (SIMPLE Cam script). Retrieved February 27, 2021, from https://forum.unity.com/threads/fly-cam-simple-cam-script.67042/
+//Converted to c#
  
 public float mainSpeed = 40.0f; //regular speed
 public float shiftAdd  = 250.0f; //multiplied by how long shift is held.  Basically running

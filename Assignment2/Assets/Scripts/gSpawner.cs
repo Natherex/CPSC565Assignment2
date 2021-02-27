@@ -7,6 +7,7 @@ public class gSpawner : MonoBehaviour
     public GameObject player;
     public static int numberOfPlayers;
     // Start is called before the first frame update
+    // [1] Press Start(2018,sept 25) Spawning Objects in Unity. Youtube, https://www.youtube.com/watch?v=E7gmylDS1C4&ab_channel=PressStart
     void Start()
     {
         for(int i = 0 ; i < globals.Instance.numberOfGrifs ; i++)

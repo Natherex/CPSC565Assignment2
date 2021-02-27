@@ -6,6 +6,7 @@ public class globals : MonoBehaviour
 {
     public static globals Instance { get; private set; }
     // Start is called before the first frame update
+    //[5]Reso Coder (2017, Mar 24) Singletons in Unity - Simple Tutorial for Beginners - https://www.youtube.com/watch?v=CPKAgyp8cno&ab_channel=ResoCoder
     public int numberOfGrifs;
     public int numberOfSlyth;
     public int spawnRate;
@@ -24,11 +25,3 @@ public class globals : MonoBehaviour
         }
     }
 }
-
-
-//https://www.youtube.com/watch?v=E7gmylDS1C4&ab_channel=PressStart
-//https://www.youtube.com/watch?v=4Wh22ynlLyk&ab_channel=PressStart
-//https://www.youtube.com/watch?v=gAB64vfbrhI&ab_channel=Brackeys
-//https://www.youtube.com/watch?v=CPKAgyp8cno&ab_channel=ResoCoder
-//https://mathworld.wolfram.com/Box-MullerTransformation.html
-//https://docs.unity3d.com/ScriptReference/
