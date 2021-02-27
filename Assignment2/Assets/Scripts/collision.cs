@@ -7,7 +7,6 @@ public class collision : MonoBehaviour
     void OnCollisionEnter (Collision collision)
     {
         PlayerBehavior player = gameObject.GetComponent<PlayerBehavior>();
-        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.name.Equals("player(Clone)"))
         {
             PlayerBehavior enemy = collision.gameObject.GetComponent<PlayerBehavior>();
