@@ -18,9 +18,14 @@ public class snitchBehavior : MonoBehaviour
         direction = new Vector3 (Random.Range(-50,50),Random.Range(-50,50),Random.Range(-50,50));
         physicsBody.AddForce(direction/20);
     }
-    void OnCollisionEnter ()
+    void OnCollisionEnter (Collision collision)
     {
         direction = -(direction*5);
         physicsBody.AddForce(direction);
+
+        if(collision.gameObject.name == "player(Clone)"){
+            transform.position = new Vector3(Random.Range(1,40),Random.Range(-50,50),Random.Range(-50,50));
+        }
+
     }
 }
