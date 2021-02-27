@@ -8,13 +8,13 @@ public class collision : MonoBehaviour
     {
         PlayerBehavior player = gameObject.GetComponent<PlayerBehavior>();
         Debug.Log(collision.gameObject.name);
-        if (collision.gameObject.name == "player(Clone)")
+        if (collision.gameObject.name.Equals("player(Clone)"))
         {
             PlayerBehavior enemy = collision.gameObject.GetComponent<PlayerBehavior>();
             double playerAttack = player.agro * Random.Range(1,100) *(1.2-0.8) * (1 - (player.Exhaustion/enemy.Exhaustion));
             double enemyAttack  = enemy.agro * Random.Range(1,100) *(1.2-0.8) * (1 - (enemy.Exhaustion/player.Exhaustion));
 
-            Debug.Log(collision.gameObject.name);
+
             if(playerAttack > enemyAttack)
             {
                 //Debug.Log(collision.gameObject.name);
@@ -37,7 +37,7 @@ public class collision : MonoBehaviour
             }
 
         }
-        else if((collision.gameObject.tag == "Arena"))
+        else if((collision.gameObject.tag.Equals("Arena")))
         {
             if(player.team == 1)
                 globals.Instance.numberOfSlyth --; 
@@ -45,7 +45,7 @@ public class collision : MonoBehaviour
                 globals.Instance.numberOfGrifs --; 
             Destroy(gameObject);
         }
-        else if((collision.gameObject.name == "Snitch"))
+        else if((collision.gameObject.name.Equals("Snitch")))
         {
             if(player.team == 1)
                 globals.Instance.sScore ++;

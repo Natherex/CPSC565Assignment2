@@ -55,7 +55,7 @@ public class PlayerBehavior : MonoBehaviour
         }else
         {
             resting = true;
-            physicsBody.velocity = Vector3.zero;
+            physicsBody.velocity = physicsBody.velocity * 0.5f;
             Exhaustion += 0.1f;
             if(Exhaustion >= maxExhaustion -1)
                 resting = false;

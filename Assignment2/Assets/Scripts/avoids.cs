@@ -11,16 +11,16 @@ public class avoids : MonoBehaviour
     {
         PlayerBehavior player = gameObject.GetComponent<PlayerBehavior>();
         physicsBody = GetComponent<Rigidbody>();
-        if(other.gameObject.tag == "Arena")
+        if(other.gameObject.tag.Equals("Arena"))
         {
-    
+                physicsBody.velocity = physicsBody.velocity * 0.9f;
                 Vector3 direction = ( other.transform.position - transform.position );
                 float distance = Vector3.Distance(transform.position, other.transform.position);
 
                 physicsBody.AddForce(direction * distance);
                 player.Exhaustion -= ((Mathf.Abs(physicsBody.velocity.x)) + (Mathf.Abs(physicsBody.velocity.x)) + (Mathf.Abs(physicsBody.velocity.x)) )* player.weight/50000;
         }
-        else if(other.gameObject.name == "player(Clone)")
+        else if(other.gameObject.name .Equals("player(Clone)"))
         {
                 PlayerBehavior enemy = other.GetComponent<PlayerBehavior>();
                 if(enemy.team == player.team)

@@ -32,7 +32,7 @@ public class sSpawner : MonoBehaviour
     private void createPlayer()
     {
         GameObject newPlayer = Instantiate(player) as GameObject;
-        newPlayer.transform.position = new Vector3(45,Random.Range(5,40),Random.Range(-30,30) );
+        newPlayer.transform.position = new Vector3(45,1.5f,Random.Range(-30,30) );
 
         newPlayer.GetComponent<PlayerBehavior>().constructor(createattribute(85,17),createattribute(16,2),createattribute(30,7),createattribute(50,15),1);
         
